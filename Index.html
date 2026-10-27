@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>আমাদের এফসি | Our FC – Kurigram</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap">
+<style>
+:root{--y:#FFDF00;--g:#009C3B;--b:#002776;--bg:#f6f8f4;--card:#fff;--tx:#14213d;--mu:#55627a;--bd:#dfe6da;--nav:#002776;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1226;--card:#131d3b;--tx:#eef2ff;--mu:#a9b4d0;--bd:#24325c;--nav:#001a52}}
+:root[data-theme="dark"]{--bg:#0b1226;--card:#131d3b;--tx:#eef2ff;--mu:#a9b4d0;--bd:#24325c;--nav:#001a52}
+html{scroll-behavior:smooth;scroll-padding-top:calc(60px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Hind Siliguri",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--nav);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--nav);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:8px}
+.logo{font-weight:700;font-size:1.15rem;color:var(--y);text-decoration:none;white-space:nowrap}
+nav{display:flex;gap:14px;overflow-x:auto;scrollbar-width:none}
+nav a{color:#fff;text-decoration:none;font-size:.95rem;white-space:nowrap;opacity:.9}
+nav a:hover{color:var(--y)}
+#lang{background:var(--y);color:var(--b);border:0;border-radius:20px;padding:4px 12px;font:700 .85rem inherit;font-family:inherit;cursor:pointer;white-space:nowrap}
+.hero{background:linear-gradient(135deg,var(--g),var(--b));color:#fff;text-align:center;padding:64px 20px 56px}
+.hero .ball{font-size:3rem}
+.hero h1{font-size:clamp(2rem,8vw,3.4rem);margin:.2em 0;color:var(--y);line-height:1.2}
+.hero p{max-width:560px;margin:0 auto 22px;font-size:1.1rem}
+.btn{display:inline-block;background:var(--y);color:var(--b);font-weight:700;border:0;border-radius:28px;padding:12px 26px;text-decoration:none;font:700 1rem "Hind Siliguri",sans-serif;cursor:pointer;margin:4px}
+.btn.alt{background:transparent;color:#fff;border:2px solid #fff}
+.btn.wa{background:#25D366;color:#fff}
+section{max-width:960px;margin:0 auto;padding:44px 18px}
+h2{color:var(--g);font-size:1.7rem;margin:0 0 6px;border-left:6px solid var(--y);padding-left:10px}
+.sub{color:var(--mu);margin:0 0 20px}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px}
+.card h3{margin:0 0 4px;color:var(--b)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .card h3{color:var(--y)}}
+.num{display:inline-flex;width:38px;height:38px;border-radius:50%;background:var(--g);color:#fff;align-items:center;justify-content:center;font-weight:700;margin-bottom:6px}
+.fee{background:var(--y);color:var(--b);border-radius:14px;padding:16px;font-weight:700;font-size:1.15rem;text-align:center;margin-bottom:16px}
+form{display:grid;gap:10px}
+label{font-weight:600;font-size:.92rem}
+input,select{width:100%;padding:11px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+.row{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dashed var(--bd);padding:8px 0}
+.tag{font-size:.75rem;background:var(--g);color:#fff;border-radius:10px;padding:1px 8px}
+.note{font-size:.85rem;color:var(--mu)}
+footer{background:var(--nav);color:#fff;text-align:center;padding:26px 16px calc(26px + env(safe-area-inset-bottom,0px))}
+footer a{color:var(--y)}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#top">⚽ <span id="club"></span></a>
+<nav>
+<a href="#about" data-i="n_about"></a><a href="#team" data-i="n_team"></a><a href="#fix" data-i="n_fix"></a><a href="#join" data-i="n_join"></a><a href="#contact" data-i="n_contact"></a>
+</nav>
+<button id="lang" type="button">EN</button>
+</header>
+
+<div class="hero" id="top">
+<div class="ball">⚽</div>
+<h1 id="club2"></h1>
+<p data-i="tag"></p>
+<a class="btn" href="#join" data-i="cta"></a>
+<a class="btn alt" href="#fix" data-i="cta2"></a>
+</div>
+
+<section id="about">
+<h2 data-i="n_about"></h2>
+<p class="sub" data-i="about_sub"></p>
+<div class="grid">
+<div class="card"><div class="num">1</div><h3 data-i="v1t"></h3><div data-i="v1d"></div></div>
+<div class="card"><div class="num">2</div><h3 data-i="v2t"></h3><div data-i="v2d"></div></div>
+<div class="card"><div class="num">3</div><h3 data-i="v3t"></h3><div data-i="v3d"></div></div>
+</div>
+</section>
+
+<section id="team">
+<h2 data-i="n_team"></h2>
+<p class="sub" data-i="team_sub"></p>
+<div class="grid" id="players"></div>
+</section>
+
+<section id="fix">
+<h2 data-i="n_fix"></h2>
+<p class="sub" data-i="fix_sub"></p>
+<div class="card" id="fixtures"></div>
+</section>
+
+<section id="join">
+<h2 data-i="n_join"></h2>
+<div class="fee" data-i="fee"></div>
+<div class="card">
+<form id="jf">
+<div><label data-i="f_name"></label><input id="nm" required></div>
+<div><label data-i="f_age"></label><input id="ag" type="number" min="5" max="60" required></div>
+<div><label data-i="f_pos"></label>
+<select id="ps"><option value="GK" data-i="p_gk"></option><option value="DF" data-i="p_df"></option><option value="MF" data-i="p_mf"></option><option value="FW" data-i="p_fw"></option></select></div>
+<div><label data-i="f_ph"></label><input id="ph" type="tel" required></div>
+<button class="btn wa" type="submit" data-i="send"></button>
+<div class="note" data-i="pay_note"></div>
+</form>
+</div>
+</section>
+
+<section id="contact">
+<h2 data-i="n_contact"></h2>
+<div class="grid">
+<div class="card"><h3 data-i="c_loc"></h3><div data-i="addr"></div></div>
+<div class="card"><h3>WhatsApp</h3><a href="https://wa.me/8801753378205">01753378205</a></div>
+<div class="card"><h3>Email</h3><a href="mailto:hosenali.usmle@gmail.com">hosenali.usmle@gmail.com</a></div>
+</div>
+<p style="text-align:center"><a class="btn wa" href="https://wa.me/8801753378205" data-i="wa_btn"></a></p>
+</section>
+
+<footer>© 2026 <span id="club3"></span> · <span data-i="addr"></span></footer>
+
+<script>
+var CLUB={bn:"আমাদের এফসি",en:"Our FC"}; // নাম বদলাতে এখানে এডিট করুন
+var T={
+bn:{n_about:"আমাদের সম্পর্কে",n_team:"টিম",n_fix:"ম্যাচ",n_join:"যোগ দিন",n_contact:"যোগাযোগ",
+tag:"কুড়িগ্রামের নতুন ফুটবল ক্লাব। খেলো মন দিয়ে, জেতো একসাথে।",cta:"ক্লাবে যোগ দিন",cta2:"ম্যাচ দেখুন",
+about_sub:"গগনমনের চর, কুড়িগ্রাম সদরের তরুণদের জন্য একটি ফুটবল পরিবার।",
+v1t:"খেলার আনন্দ",v1d:"নিয়মিত প্র্যাকটিস ও ম্যাচে সবার সুযোগ।",v2t:"শৃঙ্খলা",v2d:"সময়ানুবর্তিতা, সম্মান আর টিমওয়ার্ক।",v3t:"ভাইয়ের বন্ধন",v3d:"মাঠের বাইরেও একে অপরের পাশে।",
+team_sub:"নমুনা তালিকা। আসল খেলোয়াড়দের নাম পরে যোগ হবে।",gk:"গোলকিপার",df:"ডিফেন্ডার",mf:"মিডফিল্ডার",fw:"ফরোয়ার্ড",
+fix_sub:"নমুনা সূচি। আসল ম্যাচের তারিখ পরে দেওয়া হবে।",upc:"আসছে",
+fee:"ক্লাবে যোগ দেওয়ার ফি: ১০০ টাকা",f_name:"আপনার নাম",f_age:"বয়স",f_pos:"পছন্দের পজিশন",f_ph:"ফোন নাম্বার",
+p_gk:"গোলকিপার",p_df:"ডিফেন্ডার",p_mf:"মিডফিল্ডার",p_fw:"ফরোয়ার্ড",send:"WhatsApp-এ রিকোয়েস্ট পাঠান",
+pay_note:"রিকোয়েস্ট পাঠালে এডমিন WhatsApp-এ পেমেন্টের নাম্বার জানাবেন। ১০০ টাকা পাঠালে আপনাকে মেম্বার করা হবে।",
+c_loc:"ঠিকানা",addr:"গগনমনের চর, কুড়িগ্রাম সদর, কুড়িগ্রাম",wa_btn:"WhatsApp-এ মেসেজ করুন",
+msg:"ক্লাবে যোগ দিতে চাই।\nনাম: {n}\nবয়স: {a}\nপজিশন: {p}\nফোন: {f}\nফি ১০০ টাকা কীভাবে দেব জানান।"},
+en:{n_about:"About",n_team:"Team",n_fix:"Fixtures",n_join:"Join",n_contact:"Contact",
+tag:"A new football club in Kurigram. Play with passion, win together.",cta:"Join the Club",cta2:"View Fixtures",
+about_sub:"A football family for the young people of Gogomonerchor, Sadar, Kurigram.",
+v1t:"Love of the game",v1d:"Regular practice and match chances for everyone.",v2t:"Discipline",v2d:"Punctuality, respect and teamwork.",v3t:"Brotherhood",v3d:"Standing by each other beyond the pitch.",
+team_sub:"Sample list. Real players will be added later.",gk:"Goalkeeper",df:"Defender",mf:"Midfielder",fw:"Forward",
+fix_sub:"Sample schedule. Real match dates will be added later.",upc:"Upcoming",
+fee:"Club joining fee: 100 taka",f_name:"Your name",f_age:"Age",f_pos:"Preferred position",f_ph:"Phone number",
+p_gk:"Goalkeeper",p_df:"Defender",p_mf:"Midfielder",p_fw:"Forward",send:"Send request on WhatsApp",
+pay_note:"After you send the request, the admin will share the payment number on WhatsApp. You become a member once the 100 taka is paid.",
+c_loc:"Location",addr:"Gogomonerchor, Sadar, Kurigram",wa_btn:"Message us on WhatsApp",
+msg:"I want to join the club.\nName: {n}\nAge: {a}\nPosition: {p}\nPhone: {f}\nPlease tell me how to pay the 100 taka fee."}
+};
+var PL=[["রাহিম","Rahim",10,"fw"],["করিম","Karim",8,"mf"],["সুমন","Suman",5,"df"],["জাহিদ","Jahid",1,"gk"]];
+var FX=[["২০ নভেম্বর","20 Nov","বন্ধু একাদশ","Friends XI"],["২৭ নভেম্বর","27 Nov","গ্রাম একাদশ","Village XI"],["৪ ডিসেম্বর","4 Dec","শহর ক্লাব","Town Club"]];
+var lang="bn";
+try{lang=localStorage.getItem("lang")||"bn"}catch(e){}
+function render(){
+ var t=T[lang],i=lang==="bn"?0:1;
+ document.documentElement.lang=lang;
+ document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=t[e.getAttribute("data-i")]});
+ ["club","club2","club3"].forEach(function(id){document.getElementById(id).textContent=CLUB[lang]});
+ document.getElementById("lang").textContent=lang==="bn"?"EN":"বাংলা";
+ document.getElementById("players").innerHTML=PL.map(function(p){return '<div class="card"><div class="num">'+p[2]+'</div><h3>'+p[i]+'</h3><span class="tag">'+t[p[3]]+'</span></div>'}).join("");
+ document.getElementById("fixtures").innerHTML=FX.map(function(f){return '<div class="row"><span>'+f[i]+'</span><b>'+CLUB[lang]+' vs '+f[2+i]+'</b><span class="tag">'+t.upc+'</span></div>'}).join("");
+}
+document.getElementById("lang").onclick=function(){lang=lang==="bn"?"en":"bn";try{localStorage.setItem("lang",lang)}catch(e){}render()};
+document.getElementById("jf").onsubmit=function(e){
+ e.preventDefault();
+ var t=T[lang],pos=document.getElementById("ps");
+ var m=t.msg.replace("{n}",document.getElementById("nm").value).replace("{a}",document.getElementById("ag").value).replace("{p}",pos.options[pos.selectedIndex].text).replace("{f}",document.getElementById("ph").value);
+ window.open("https://wa.me/8801753378205?text="+encodeURIComponent(m),"_blank");
+};
+render();
+</script>
+</body>
+</html>
